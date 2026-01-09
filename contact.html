@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camille Delanchy | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Camille Delanchy</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1>Me contacter</h1>
+        <p>Pour toute demande de devis ou de renseignement, je suis à votre disposition.</p>
+        
+        <div class="contact-card">
+            <p><strong>Adresse Mail :</strong> <a href="entreprise.camille.delanchy@gmail.com" style="color:var(--gris-fonce);">entreprise.camille.delanchy@gmail.com</a></p>
+            <p><strong>Adresse :</strong> 81190 Montirat</p>
+            <p><strong>Zone d'intervention :</strong> Montirat et ses environs (81)</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Camille Delanchy - Tous droits réservés</p>
+        <p>SIREN : 539 452 136 | 81190 Montirat</p>
+        <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    </footer>
+
+</body>
+</html>

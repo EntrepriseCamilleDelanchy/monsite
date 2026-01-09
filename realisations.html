@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camille Delanchy | Réalisations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Camille Delanchy</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="realisations.html" class="active">Réalisations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1>Mes Réalisations & Services</h1>
+        <p>Un aperçu des travaux d'entretien et de bricolage que je réalise pour vous à Montirat et ses environs.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Entretien de Jardin</h3>
+                <p>Tonte de pelouse, débroussaillage de terrains et de talus, taille de petites haies.</p>
+                <p><em>Inclus : évacuation des déchets verts en déchèterie.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>Petit Bricolage</h3>
+                <p>Montage de meubles en kit, pose de tringles à rideaux, changement de joints ou d'ampoules, petites réparations diverses.</p>
+            </div>
+
+            <div class="card">
+                <h3>Aide & Manutention</h3>
+                <p>Déplacement de meubles, débarras de cave ou grenier, aide au transport d'objets encombrants ou petits déménagements.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Camille Delanchy - Tous droits réservés</p>
+        <p>SIREN : 539 452 136 | 81190 Montirat</p>
+        <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    </footer>
+
+</body>
+</html>

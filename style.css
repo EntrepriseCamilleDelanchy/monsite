@@ -1,0 +1,192 @@
+/* --- CONFIGURATION GÉNÉRALE --- */
+:root {
+    --blanc: #ffffff;
+    --gris-tres-clair: #f4f4f4;
+    --gris-bordure: #dddddd;
+    --gris-moyen: #888888;
+    --gris-fonce: #333333;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--gris-fonce);
+    background-color: var(--blanc);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- NAVIGATION (HEADER) --- */
+header {
+    background: var(--gris-fonce);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--blanc);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--blanc);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+/* --- SECTIONS ET CONTENU --- */
+.container {
+    max-width: 1000px; /* Un peu plus large pour les 3 bulles */
+    margin: 0 auto;
+    padding: 60px 20px;
+    flex: 1;
+    width: 100%;
+    text-align: center; /* Centre le texte (Bienvenue, etc.) par défaut */
+}
+
+.hero {
+    background-color: var(--gris-tres-clair);
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--gris-bordure);
+}
+
+.hero p {
+    margin-bottom: 30px; 
+}
+
+h1 { margin-bottom: 20px; font-size: 2.2rem; }
+h2 { margin-bottom: 30px; }
+
+/* --- GRILLE DE RÉALISATIONS (LES 3 BULLES) --- */
+.grid {
+    display: grid;
+    /* On force 3 colonnes sur PC, et on adapte sur mobile */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: var(--blanc);
+    padding: 30px;
+    border: 1px solid var(--gris-bordure);
+    border-radius: 5px;
+    text-align: center; /* Centre le contenu des bulles */
+}
+
+/* --- FORMULAIRE DE CONTACT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 30px;
+    text-align: left; /* Garde le formulaire à gauche pour la lisibilité */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-bordure);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* --- BOUTONS --- */
+.btn {
+    display: inline-block;
+    background: var(--gris-fonce);
+    color: var(--blanc);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #000000;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--gris-fonce);
+    color: var(--blanc);
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+footer p { margin-bottom: 8px; opacity: 0.9; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 850px) {
+    .grid {
+        grid-template-columns: 1fr; /* Les bulles s'empilent sur petit écran */
+    }
+}
+
+@media (max-width: 768px) {
+    header { height: auto; padding: 20px 0; }
+    nav { flex-direction: column; }
+    nav ul { margin-top: 15px; }
+    nav ul li {
